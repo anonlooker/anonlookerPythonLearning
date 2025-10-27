@@ -5,3 +5,4 @@ area = side_length ** 2
 perimeter = 4 * side_length
 print("Area of the square: ", area)
 print("Perimeter of the square: ", perimeter)
+#p2-Exercise-5.py
