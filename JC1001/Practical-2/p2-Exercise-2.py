@@ -6,4 +6,3 @@
 miles = float(input("Enter distance in miles: "))
 kilometres = miles / 0.6214
 print("%f miles is equal to %f kilometres." % (miles, kilometres))
-#p2-Exercise-2.py
