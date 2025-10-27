@@ -1,4 +1,4 @@
-#6) The speed of light c is approximately 3 × 108meters per second. Write a
+#6) The speed of light c is approximately 3 × 10^8 meters per second. Write a
 #program that asks the user to input a time in seconds and returns the distance
 #that light travels in this time. Your program should output the distance in meters,
 #kilometres, and miles.
