@@ -2,7 +2,7 @@
 the year of their birth and returns this information to the user.*/
 #include <iostream>
 #include <string>
-#include <ctime>
+#include <chrono>
 using std::cin;
 using std::cout;
 using std::string;
@@ -13,9 +13,9 @@ int main(void)
     string name;
     int age;
     // For the current year
-    time_t t = time(0);
-    tm* now = localtime(&t);
-    int currentYear = now->tm_year + 1900;
+    auto now = std::chrono::system_clock::now();
+    std::time_t time_tNow_c = std::chrono::system_clock::to_time_t(now);
+    int currentYear = 1900 + std::localtime(&time_tNow_c)->tm_year;
     // Ask for name
     cout<< "What is your name? ";
     getline(cin, name);
