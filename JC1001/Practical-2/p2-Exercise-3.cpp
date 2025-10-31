@@ -20,4 +20,4 @@ int main(void)
 
     return 0;
 }
-//p2-Exercise-3.py
+//p2-Exercise-3.cpp
