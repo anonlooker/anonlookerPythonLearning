@@ -1,4 +1,4 @@
- #4) Write a program that reverses the calculation performed in exercise 4.
+#4) Write a program that reverses the calculation performed in exercise 4.
 #That is, it should convert a temperature in degrees Celsius to degrees Fahrenheit.
 #Include in the output, the original value in Celsius that has been converted into
 #degrees Fahrenheit. (a simple way to perform this calculation is to multiply the
