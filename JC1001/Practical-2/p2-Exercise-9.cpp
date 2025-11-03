@@ -6,8 +6,5 @@ Are your variables named suitably?*/
 // This is a review exercise; no code changes are necessary.
 // The previous exercises have been reviewed for comments, consistency, and variable naming.
 
-int main(void)
-{
-    return 0;
-}
+int main(void) {}
 //p2-Exercise-9.cpp
