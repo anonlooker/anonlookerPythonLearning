@@ -2,21 +2,21 @@
 user enters a duration in seconds and the duration is returned to the user in days, 
 hours, minutes, and seconds, with each unit of time printed on a separate line.*/
 #include <iostream>
+#include <gmpxx.h>  //GNU Multiple Precision Arithmetic Library C++ wrapper
 using std::cin;
 using std::cout;
 using std::endl;
 int main(void)
 {
-    int totalSeconds;
+    mpz_class totalSeconds;
     cout << "Enter duration in seconds: ";
     cin >> totalSeconds;
-
-    int days = totalSeconds / 86400;
+    mpz_class days = totalSeconds / 86400;
     totalSeconds %= 86400;
-    int hours = totalSeconds / 3600;
+    unsigned hours = totalSeconds.get_ui() / 3600;
     totalSeconds %= 3600;
-    int minutes = totalSeconds / 60;
-    int seconds = totalSeconds % 60;
+    unsigned minutes = totalSeconds.get_ui() / 60;
+    unsigned seconds = totalSeconds.get_ui() % 60;
 
     cout << "Duration:" << endl;
     cout << days << " days" << endl;
