@@ -1,0 +1,17 @@
+buying=["apple","banana","mango","grapes","orange"]
+print("Original list:",buying)
+print("Length of the list:",len(buying))
+print(buying[0],buying[1],buying[2],buying[3],buying[4])
+buying.append("kiwi")
+print("List after adding kiwi:",buying)
+print(buying[0],buying[1],buying[2],buying[3],buying[4],buying[5])
+buying.remove("banana")
+print("List after removing banana:",buying)
+print(buying[0],buying[1],buying[2],buying[3],buying[4])
+buying.sort()
+print("Sorted list:",buying)
+print(buying[0],buying[1],buying[2],buying[3],buying[4])
+print(buying.__len__())
+iter=iter(buying)
+for item in iter:
+    print(item)
