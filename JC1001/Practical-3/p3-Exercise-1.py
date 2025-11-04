@@ -19,3 +19,4 @@ else:
     discount = 0.5
 final_amount = total_price - (total_price * discount)
 print("Final amount to pay: %.2f" % final_amount)
+#p3-Exercise-1.py
