@@ -10,3 +10,4 @@ elif letter == 'y':
     print("The letter 'y' can sometimes be a vowel and sometimes is not.")
 else:
     print("The letter '%s' is a consonant." % letter)
+#p3-Exercise-2.py
