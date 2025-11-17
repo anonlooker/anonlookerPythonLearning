@@ -10,4 +10,5 @@ def withoutVowels(text):
         if char not in vowels:
             result += char
     return result
+
 #p5-Exercise-1.py
