@@ -1,5 +1,5 @@
 try:
-    with open("text.txt", 'r') as file:
+    with open("MyOwnTry/filesIO/Text.txt", 'r') as file:
         content = file.read()
         print(content)
 except FileNotFoundError:
