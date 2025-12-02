@@ -2,13 +2,23 @@
 #include<string>
 using std::cout; using std::endl; using std::cin;
 using std::string;
-class Book
+class object
 {
     public:
-        string isbn, name;
+        string name;
+        int printName()
+        {
+            cout << "Name is " << name << endl ;
+            return 0;
+        }
+};
+class Book: public object
+{
+    public:
+        string isbn;
         int printIsbn()
         {
-            cout<<"ISBN of "<< name <<" is "<<isbn;
+            cout << "ISBN of \"" << name << "\" is " << isbn << endl ;
             return 0;
         }
 };
