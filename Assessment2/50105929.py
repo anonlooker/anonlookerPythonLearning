@@ -86,9 +86,46 @@ def checkDraw(board):
     return True
 #p3q16
 def checkWin(board):
-    for 
+    # Rows
+    for r in range(3):
+        if board[r][0] != "_" and board[r][0] == board[r][1] == board[r][2]:
+            return True
+    # Columns
+    for c in range(3):
+        if board[0][c] != "_" and board[0][c] == board[1][c] == board[2][c]:
+            return True
+    # Diagonals
+    if board[0][0] != "_" and board[0][0] == board[1][1] == board[2][2]:
+        return True
+    if board[0][2] != "_" and board[0][2] == board[1][1] == board[2][0]:
+        return True
+    return False
 
-#testp3
-if __name__ == "__main__":
+def playGame():
     board = createBoard()
+    is_x_turn = True
+    print("Welcome to Tic-Tac-Toe! Enter positions 1-9.")
     displayBOard(board)
+    while True:
+        player = "X" if is_x_turn else "O"
+        print(f"Player {player}, make your move (1-9):")
+        move = getMove()
+        if move is False:
+            print("Invalid input. Please enter a number 1-9.")
+            continue
+        row, col = intToBoard(move)
+        updated, board = insertToBoard((row, col), board, is_x_turn)
+        if not updated:
+            print("That square is taken. Try another.")
+            continue
+        displayBOard(board)
+        if checkWin(board):
+            print(f"Player {player} wins!")
+            break
+        if checkDraw(board):
+            print("It's a draw!")
+            break
+        is_x_turn = not is_x_turn
+
+if __name__ == "__main__":
+    playGame()
