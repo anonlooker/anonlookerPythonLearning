@@ -37,11 +37,11 @@ def oddList(begin,end):
 def reverseString(s):
     return s[::-1]
 #p2q9
-def startAndEnd(list):
-    if list.begin() == list.end():
-        return (True)
+def startAndEnd(lst):
+    if lst[0] == lst[-1]:
+        return True
     else:
-        return (False)
+        return False
 #p3q10
 def createBoard():
     return(
@@ -50,7 +50,7 @@ def createBoard():
         ["_","_","_"]]
         )
 #p3q11
-def displayBOard(board):
+def displayBoard(board):
     print(f"[\"{board[0][0]}\",\"{board[0][1]}\",\"{board[0][2]}\"]")
     print(f"[\"{board[1][0]}\",\"{board[1][1]}\",\"{board[1][2]}\"]")
     print(f"[\"{board[2][0]}\",\"{board[2][1]}\",\"{board[2][2]}\"]")
